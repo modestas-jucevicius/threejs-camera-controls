@@ -72,7 +72,6 @@ function render() {
 	//Nustatom pradinę poziciją
 	camera2Prop.position.add(C2LookingPoint);
 	camera2Prop.position.x -= 100;
-	camera2Prop.position.y += 40;
 	camera2Prop.up = new THREE.Vector3(0, 1, 0)
 	camera2Prop.lookAt(C2LookingPoint);
 	
@@ -201,7 +200,7 @@ function animate() {
 //funkcija C2 animacijai
 function animateC2() {
 	//Paskaičiuojam kameros pokytį viename kadre
-	var camera2AnimationVector = camera2ToKingStartVector.clone().normalize().multiplyScalar(100/(0.5 * frameCount));
+	var camera2AnimationVector = camera2ToKingStartVector.clone().normalize().multiplyScalar(70/(0.5 * frameCount));
 	//Jei animacija pirmoje pusėje, kamera artėja
 	if (animation_process < frameCount * 0.5) {
 		camera2Prop.position.sub(camera2AnimationVector);
